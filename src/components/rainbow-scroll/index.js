@@ -5,10 +5,9 @@ import { getHueValue } from '../../lib/rainbow-scroll'
 import './style.css'
 
 const RainbowScroll = () => {
-  const scrollY = useScroll()
   const mainRef = useRef(null)
-
-  var scrollMaxY = mainRef.scrollMaxY || document.documentElement.scrollHeight - document.documentElement.clientHeight
+  const scrollY = useScroll()
+  const scrollMaxY = mainRef.scrollMaxY || document.documentElement.scrollHeight - document.documentElement.clientHeight
 
   const hueValue = getHueValue(scrollY, scrollMaxY) || 0
 
