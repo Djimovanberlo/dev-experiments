@@ -10,7 +10,7 @@ const RainbowScroll = () => {
 
   var scrollMaxY = mainRef.scrollMaxY || document.documentElement.scrollHeight - document.documentElement.clientHeight
 
-  const hslValue = getHSLValue(scrollY, scrollMaxY)
+  const hslValue = getHSLValue(scrollY, scrollMaxY) || 0
 
   return (
     <div

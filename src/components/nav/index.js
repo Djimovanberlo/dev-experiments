@@ -9,8 +9,8 @@ const Nav = () => {
 
   return (
     <div className='nav flex flex-wrap bg-black text-white justify-around sticky top-0 py-1.5'>
-      {navItems.map(item => (
-        <button onClick={() => navigate(item.path)}>
+      {navItems.map((item, i) => (
+        <button key={i} onClick={() => navigate(item.path)}>
           <p>{item.name}</p>
         </button>
       ))}
