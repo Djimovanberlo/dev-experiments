@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 
 import useScroll from '../../lib/useScroll'
-import { getHSLValue } from '../../lib/rainbow-scroll'
+import { getHueValue } from '../../lib/rainbow-scroll'
 import './style.css'
 
 const RainbowScroll = () => {
@@ -10,12 +10,12 @@ const RainbowScroll = () => {
 
   var scrollMaxY = mainRef.scrollMaxY || document.documentElement.scrollHeight - document.documentElement.clientHeight
 
-  const hslValue = getHSLValue(scrollY, scrollMaxY) || 0
+  const hueValue = getHueValue(scrollY, scrollMaxY) || 0
 
   return (
     <div
       ref={mainRef}
-      style={{ backgroundColor: `hsl(${hslValue}, 100%, 50%)` }}
+      style={{ backgroundColor: `hsl(${hueValue}, 100%, 40%)` }}
       className='text-white text-center min-h-screen-2 flex flex-col justify-around'>
       <h1>Some text</h1>
       <h1>Some more text</h1>
