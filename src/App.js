@@ -1,5 +1,4 @@
-// import {  } from 'react-dom'
-import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 
 import Nav from './components/nav'
 import Home from './components/home'
