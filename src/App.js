@@ -1,5 +1,4 @@
-// import {  } from 'react-dom'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 
 import Nav from './components/nav'
 import Home from './components/home'
@@ -8,13 +7,13 @@ import RainbowScroll from './components/rainbow-scroll'
 const App = () => {
   return (
     <div className='app'>
-      <BrowserRouter>
+      <HashRouter>
         <Nav />
         <Routes>
           <Route path='/rainbow-scroll' element={<RainbowScroll />} />
           <Route path='/' element={<Home />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   )
 }
