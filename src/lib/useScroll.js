@@ -3,17 +3,16 @@ import React, { useState, useEffect } from 'react'
 const useScroll = () => {
   const [scrollY, setScrollY] = useState(0)
 
-  function logit() {
+  const setYOffset = () => {
     setScrollY(window.pageYOffset)
   }
 
   useEffect(() => {
-    function watchScroll() {
-      window.addEventListener('scroll', logit)
-    }
-    watchScroll()
+    (function() {
+      window.addEventListener('scroll', setYOffset)
+    })()
     return () => {
-      window.removeEventListener('scroll', logit)
+      window.removeEventListener('scroll', setYOffset)
     }
   })
 
