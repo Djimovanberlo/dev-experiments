@@ -29,7 +29,7 @@ const HorizontalScroll = () => {
   const imgWithFallback = imgArray[activeImg] ? imgArray[activeImg] : one
 
   return (
-    <div className='flex mt-4 w-9/12 mx-auto '>
+    <div className='flex mt-4 w-1/2 mx-auto '>
       <div ref={scrollRef} className='overflow-auto mx-2 p-2 border-2'>
         <h1 ref={childRef} className='whitespace-nowrap'>
           I was once very sad. Then I became somewhat content AND NOW I'M <strike>SUPER</strike> ULTRA HAPPY
