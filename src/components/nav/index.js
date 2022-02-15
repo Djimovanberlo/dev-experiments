@@ -5,6 +5,7 @@ const Nav = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Rainbow scroll', path: '/rainbow-scroll' },
+    { name: 'Horizontal scroll', path: '/horizontal-scroll' },
   ]
 
   return (

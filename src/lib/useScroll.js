@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 const useScroll = () => {
   const [scrollY, setScrollY] = useState(0)
@@ -8,7 +8,7 @@ const useScroll = () => {
   }
 
   useEffect(() => {
-    (function() {
+    ;(function () {
       window.addEventListener('scroll', setYOffset)
     })()
     return () => {
